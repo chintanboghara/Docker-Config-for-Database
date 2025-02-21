@@ -1,5 +1,4 @@
 # Ignore local database data directories for Docker Compose persistent storage.
-# If you are using bind mounts for data persistence (instead of Docker named volumes),
 
 # MongoDB data directory (if using a bind mount for /data/db)
 mongodb/db_data/
