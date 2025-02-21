@@ -1,0 +1,15 @@
+# Ignore local database data directories for Docker Compose persistent storage.
+# If you are using bind mounts for data persistence (instead of Docker named volumes),
+
+# MongoDB data directory (if using a bind mount for /data/db)
+mongodb/db_data/
+
+# MySQL data directory (if using a bind mount)
+mysql/mysql/
+
+# PostgreSQL data directory (if using a bind mount for /var/lib/postgresql/data)
+postgresql/data/
+
+# If you ever choose to use host directories for Redis persistence, you might add:
+# redis/data/
+# redisinsight/db/
