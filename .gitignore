@@ -1,14 +1,16 @@
-# Ignore local database data directories for Docker Compose persistent storage.
+# Database data directories for Docker Compose persistent storage
+# These directories serve as bind mounts for database containers, storing large data files
+# that should not be tracked in version control.
 
-# MongoDB data directory (if using a bind mount for /data/db)
+# MongoDB data directory (bind mount for container's /data/db)
 mongodb/db_data/
 
-# MySQL data directory (if using a bind mount)
+# MySQL data directory (bind mount for container's /var/lib/mysql)
 mysql/mysql/
 
-# PostgreSQL data directory (if using a bind mount for /var/lib/postgresql/data)
+# PostgreSQL data directory (bind mount for container's /var/lib/postgresql/data)
 postgresql/data/
 
-# If you ever choose to use host directories for Redis persistence, you might add:
-# redis/data/
-# redisinsight/db/
+# Optional: Uncomment the following if using bind mounts for Redis persistence
+# redis/data/          # Redis data directory
+# redisinsight/db/     # RedisInsight data directory
